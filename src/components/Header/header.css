@@ -1,0 +1,21 @@
+.header {
+    background-color: antiquewhite;
+    padding-block: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__links {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    margin-right: 26px;
+}
