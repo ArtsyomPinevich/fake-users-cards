@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import Header from './Header/Header';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from '../store/usersSlice/usersSlice';
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+import {fetchUsers} from '../store/usersSlice/usersSlice';
 
 const HomePage = () => {
     const dispatch = useDispatch();
