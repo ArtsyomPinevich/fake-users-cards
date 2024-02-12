@@ -24,7 +24,7 @@ export const userSlice = createSlice({
             state.loading = true;
         });
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
-            state.userList = action.payload;
+            state.userList = action.payload.users;
             state.loading = false;
         });
     },
