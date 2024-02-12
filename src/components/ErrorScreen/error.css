@@ -1,0 +1,44 @@
+.error-page {
+    background-color: #d8e5f2;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page__error-code {
+    font-size: 72px;
+}
+
+.error-page__user-message {
+    margin-top: 20px;
+    font-size: 48px;
+}
+
+.error-page__additional-info {
+    font-size: 32px;
+}
+
+.error-page__error-message {
+    font-size: 32px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.error-page button {
+    margin-top: 20px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    padding: 12px 8px;
+    border: transparent;
+    border-radius: 6px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.error-page button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
