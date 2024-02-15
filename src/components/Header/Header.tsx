@@ -13,9 +13,7 @@ const Header = () => {
                     <li className="nav__link">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="nav__link">
-                        <Link to="/favorite">Favorite</Link>
-                    </li>
+
                     <li className="nav__link">
                         <Link to="/about">About</Link>
                     </li>
