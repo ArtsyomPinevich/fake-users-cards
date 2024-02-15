@@ -1,0 +1,51 @@
+.user-preview-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.user-preview-card__more-info-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.user-preview-card__more-info-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* move this to another component */
+
+.user-preview-card__img-wrapper img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.user-preview-card__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.user-preview-card__add-to-favorite {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 160px;
+    border: transparent;
+    background-color: transparent;
+}
