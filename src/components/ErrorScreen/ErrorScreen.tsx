@@ -1,10 +1,16 @@
 import {Link, useRouteError} from 'react-router-dom';
 import './error.css';
 
+type StatusTypes = {
+    status: number;
+    statusText: string;
+    data: string;
+};
+
 const ErrorScreen = () => {
     const error = useRouteError();
-    const {status, statusText, data} = error;
-    console.log(error);
+    const {status, statusText, data} = error as StatusTypes;
+
     return (
         <section className="error-page">
             <h2 className="error-page__error-code">
