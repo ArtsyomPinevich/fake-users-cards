@@ -4,7 +4,6 @@ import axios from 'axios';
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async (_, thunkAPI) => {
     try {
         const response = await axios.get('https://dummyjson.com/users');
-        console.log('res', response.data);
         return response.data;
     } catch (error) {
         console.log(error);
@@ -15,7 +14,6 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async (_, thunkAP
 export const fetchUserById = createAsyncThunk('users/fetchUserById', async (id: number, thunkAPI) => {
     try {
         const response = await axios.get(`https://dummyjson.com/users/${id}`);
-        console.log('res', response.data);
         return response.data;
     } catch (error) {
         console.log(error);
