@@ -1,4 +1,4 @@
-import {createAsyncThunk, createSlice, current} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async (_, thunkAPI) => {
@@ -44,7 +44,7 @@ export const userSlice = createSlice({
     reducers: {
         toggleFavorite: (state, action) => {
             const id = action.payload;
-            state.isFavorite = {...state.isFavorite, [id]: !state.isFavorite[id]};
+            state.isFavorite = {...state.isFavorite, [id]: !state.isFavorite[id as keyof typeof state.isFavorite]};
             localStorage.setItem('isFavorite', JSON.stringify(state.isFavorite));
         },
     },

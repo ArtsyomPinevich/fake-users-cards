@@ -2,14 +2,21 @@ import {MdFavorite} from 'react-icons/md';
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleFavorite} from '../../store/usersSlice/usersSlice';
 
-const UserImage = ({image, firstName, lastName, id}) => {
+type UserImageProps = {
+    id: number;
+    firstName: string;
+    lastName: string;
+    image: string;
+};
+
+const UserImage = ({image, firstName, lastName, id}: UserImageProps) => {
     const dispatch = useDispatch();
 
     const handleAddToFavorite = () => {
         dispatch(toggleFavorite(Number(id)));
     };
 
-    const isFavorite = useSelector((state) => state.users.isFavorite[id]);
+    const isFavorite = useSelector((state: any) => state.users.isFavorite[id]);
 
     return (
         <div className="user-preview-card__img-wrapper">

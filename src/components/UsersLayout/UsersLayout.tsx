@@ -1,17 +1,17 @@
-import {memo, useEffect, useState} from 'react';
+import {memo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import UserCard from '../UserCard/UserCard';
 import './userLayout.css';
 
 const UsersLayout = () => {
-    const {userList, loading} = useSelector((state) => state.users);
+    const {userList, loading} = useSelector((state: any) => state.users);
     const [userLimit, setUserLimit] = useState(20);
 
     const [filterFavorite, setFilterFavorite] = useState(false);
-
-    const isFavorite = useSelector((state) => state.users.isFavorite);
+    //fix types
+    const isFavorite = useSelector((state: any) => state.users.isFavorite);
     const limitedUsers = userList
-        .filter((user) => {
+        .filter((user: any) => {
             if (filterFavorite) {
                 return isFavorite[user.id];
             } else {
@@ -34,7 +34,7 @@ const UsersLayout = () => {
                 {loading ? (
                     <p>loading</p>
                 ) : (
-                    limitedUsers.map((user) => (
+                    limitedUsers.map((user: any) => (
                         <div className="user-card" key={user.id}>
                             <UserCard user={user} />
                         </div>

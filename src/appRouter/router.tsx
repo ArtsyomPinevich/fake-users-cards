@@ -5,7 +5,6 @@ import UsersLayout from '../components/UsersLayout/UsersLayout';
 import Favorite from '../components/Favorite/Favorite';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import UserPage from '../components/UserPage/UserPage';
-import {Children} from 'react';
 
 const router = createBrowserRouter([
     {

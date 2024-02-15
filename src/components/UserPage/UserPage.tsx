@@ -1,9 +1,10 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate, useParams} from 'react-router-dom';
-import {fetchUserById, toggleFavorite} from '../../store/usersSlice/usersSlice';
+import {fetchUserById} from '../../store/usersSlice/usersSlice';
 import {useEffect} from 'react';
 import UserImage from '../UserImage/UserImage';
 import './userPage.css';
+import {AppDispatch} from '../../store/store';
 
 type User = {
     id: number;
@@ -25,12 +26,12 @@ const UserPage = () => {
     const {id} = useParams();
     const navigate = useNavigate();
 
-    const dispatch = useDispatch();
+    const dispatch: AppDispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchUserById(Number(id)));
     }, [dispatch, id]);
-
-    const {singleUserData, loading} = useSelector((state) => state.users);
+    //fix
+    const {singleUserData, loading} = useSelector((state: any) => state.users);
 
     const {firstName, lastName, maidenName, age, gender, username, image, eyeColor, height, weight, bloodGroup, university} = singleUserData as User;
 

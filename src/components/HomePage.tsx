@@ -3,9 +3,10 @@ import Header from './Header/Header';
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {fetchUsers, loadFavorite} from '../store/usersSlice/usersSlice';
+import {AppDispatch} from '../store/store';
 
 const HomePage = () => {
-    const dispatch = useDispatch();
+    const dispatch: AppDispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchUsers());

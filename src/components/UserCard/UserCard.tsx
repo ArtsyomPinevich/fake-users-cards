@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
 import './usercard.css';
-import {useDispatch, useSelector} from 'react-redux';
-import {toggleFavorite} from '../../store/usersSlice/usersSlice';
+
 import {memo} from 'react';
 
 import UserImage from '../UserImage/UserImage';
+import {useSelector} from 'react-redux';
 
 type User = {
     id: number;
@@ -22,8 +22,9 @@ type userCardProps = {
 };
 
 const UserCard = ({user}: userCardProps) => {
-    const {id, firstName, lastName, maidenName, age, gender, username, image} = user;
-    const isFavorite = useSelector((state) => state.users.isFavorite[id]);
+    const {id, firstName, lastName, age, gender, image} = user;
+    //todo: fix
+    const isFavorite = useSelector<any>((state) => state.users.isFavorite[id]);
     return (
         <div className="user-preview-card" style={{border: `2px solid ${isFavorite ? 'pink' : 'transparent'} `}}>
             <UserImage image={image} firstName={firstName} lastName={lastName} id={Number(id)} />
