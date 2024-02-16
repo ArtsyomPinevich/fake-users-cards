@@ -2,6 +2,8 @@
 
 Project that gets user data from api, displays it as cards and contains functionality as add to favorite, view more data . Also saves favorite users in localstorage. 
 
+**P.S. There is no proper typescript typization RN. I will fix it ASAP**
+
 # Screenshots
 
 1.  ![screen1](https://github.com/ArtsyomPinevich/fake-users-cards/assets/135687842/d9a34f48-e987-4efe-95b5-260adf9f1c9f)
