@@ -1,10 +1,11 @@
 import {createBrowserRouter} from 'react-router-dom';
 import HomePage from '../components/HomePage';
-import About from '../components/About/About';
 import UsersLayout from '../components/UsersLayout/UsersLayout';
-import Favorite from '../components/Favorite/Favorite';
-import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import UserPage from '../components/UserPage/UserPage';
+import ErrorScreen from '../Pages/ErrorScreen/ErrorScreen';
+import {Suspense, lazy} from 'react';
+
+const UserPageComponent = lazy(() => import('../Pages/UserPage/UserPage'));
+const AboutPage = lazy(() => import('../Pages/About/About'));
 
 const router = createBrowserRouter([
     {
@@ -16,9 +17,22 @@ const router = createBrowserRouter([
                 errorElement: <ErrorScreen />,
                 children: [
                     {path: '/', index: true, element: <UsersLayout />},
-                    {path: '/:id', element: <UserPage />},
-                    {path: '/favorite', element: <Favorite />},
-                    {path: '/about', element: <About />},
+                    {
+                        path: '/:id',
+                        element: (
+                            <Suspense fallback={'loading'}>
+                                <UserPageComponent />
+                            </Suspense>
+                        ),
+                    },
+                    {
+                        path: '/about',
+                        element: (
+                            <Suspense fallback={'loading'}>
+                                <AboutPage />
+                            </Suspense>
+                        ),
+                    },
                 ],
             },
         ],
