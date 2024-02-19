@@ -1,3 +1,5 @@
+import './userImage.css';
+
 import {MdFavorite} from 'react-icons/md';
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleFavorite} from '../../store/usersSlice/usersSlice';

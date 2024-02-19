@@ -5,9 +5,9 @@ import './userLayout.css';
 
 const UsersLayout = () => {
     const {userList, loading} = useSelector((state: any) => state.users);
-    const [userLimit, setUserLimit] = useState(20);
+    const [userLimit, setUserLimit] = useState<number>(20);
 
-    const [filterFavorite, setFilterFavorite] = useState(false);
+    const [filterFavorite, setFilterFavorite] = useState<boolean>(false);
     //fix types
     const isFavorite = useSelector((state: any) => state.users.isFavorite);
     const limitedUsers = userList

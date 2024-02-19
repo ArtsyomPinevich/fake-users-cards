@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate, useParams} from 'react-router-dom';
 import {fetchUserById} from '../../store/usersSlice/usersSlice';
 import {useEffect} from 'react';
-import UserImage from '../UserImage/UserImage';
+import UserImage from '../../components/UserImage/UserImage';
 import './userPage.css';
 import {AppDispatch} from '../../store/store';
 
