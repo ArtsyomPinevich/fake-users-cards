@@ -4,23 +4,8 @@ import {fetchUserById} from '../../store/usersSlice/usersSlice';
 import {useEffect} from 'react';
 import UserImage from '../../components/UserImage/UserImage';
 import './userPage.css';
-import {AppDispatch} from '../../store/store';
-
-type User = {
-    id: number;
-    firstName: string;
-    lastName: string;
-    maidenName: string;
-    age: number;
-    gender: string;
-    username: string;
-    image: string;
-    eyeColor: string;
-    height: number;
-    weight: number;
-    bloodGroup: string;
-    university: string;
-};
+import {AppDispatch, RootState} from '../../store/store';
+import {User} from '../../Types/appTypes';
 
 const UserPage = () => {
     const {id} = useParams();
@@ -30,8 +15,7 @@ const UserPage = () => {
     useEffect(() => {
         dispatch(fetchUserById(Number(id)));
     }, [dispatch, id]);
-    //fix
-    const {singleUserData, loading} = useSelector((state: any) => state.users);
+    const {singleUserData, loading} = useSelector((state: RootState) => state.users);
 
     const {firstName, lastName, maidenName, age, gender, username, image, eyeColor, height, weight, bloodGroup, university} = singleUserData as User;
 

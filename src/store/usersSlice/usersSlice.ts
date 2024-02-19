@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
+import {IsFavoriteType, User} from '../../Types/appTypes';
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async (_, thunkAPI) => {
     try {
@@ -34,10 +35,10 @@ export const loadFavorite = createAsyncThunk('users/loadFavorite', async () => {
 export const userSlice = createSlice({
     name: 'users',
     initialState: {
-        userList: [],
-        isFavorite: {},
-        singleUserData: [],
-        loading: false,
+        userList: [] as Array<User> | [],
+        isFavorite: {} as {} | IsFavoriteType,
+        singleUserData: [] as User | [],
+        loading: false as boolean,
     },
     reducers: {
         toggleFavorite: (state, action) => {

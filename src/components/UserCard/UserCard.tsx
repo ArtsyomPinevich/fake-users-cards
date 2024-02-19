@@ -5,17 +5,7 @@ import {memo} from 'react';
 
 import UserImage from '../UserImage/UserImage';
 import {useSelector} from 'react-redux';
-
-type User = {
-    id: number;
-    firstName: string;
-    lastName: string;
-    maidenName: string;
-    age: number;
-    gender: string;
-    username: string;
-    image: string;
-};
+import {User} from '../../Types/appTypes';
 
 type userCardProps = {
     user: User;
