@@ -1,0 +1,23 @@
+.user-preview-card__img-wrapper img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.user-preview-card__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-preview-card__add-to-favorite {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 160px;
+    border: transparent;
+    background-color: transparent;
+}
