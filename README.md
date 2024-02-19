@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Fake user cards React project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project that gets user data from api, displays it as cards and contains functionality as add to favorite, view more data . Also saves favorite users in localstorage. 
 
-Currently, two official plugins are available:
+**P.S. There is no proper typescript typization RN. I will fix it ASAP**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Screenshots
 
-## Expanding the ESLint configuration
+1.  ![screen1](https://github.com/ArtsyomPinevich/fake-users-cards/assets/135687842/d9a34f48-e987-4efe-95b5-260adf9f1c9f)
+2.  ![screen2](https://github.com/ArtsyomPinevich/fake-users-cards/assets/135687842/b24a0d8c-fcb3-4ca4-8864-137150c0ee4c)
+3.  ![screen3](https://github.com/ArtsyomPinevich/fake-users-cards/assets/135687842/fdcfee15-0ef7-469b-8e3b-1d01bdaee23b)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## How to use
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone repository
+
+```
+git clone https://github.com/ArtsyomPinevich/fake-users-cards
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. open project folder
+
+```
+cd fake-users-cards
+```
+
+3. install dependencies:
+
+```
+yarn or yarn install
+```
+
+4. run dev server
+
+```
+yarn run dev
+```
